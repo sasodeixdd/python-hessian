@@ -57,7 +57,7 @@ class HessianProxy(object):
             credentials = (self._uri.username, self._uri.password)
 
         if credentials:
-            auth = 'Basic ' + base64.b64encode(':'.join(credentials))
+            auth = 'Basic ' + base64.b64encode(':'.join(credentials).encode('ASCII')).decode('ASCII')
             self._headers.append(('Authorization', auth))
 
     @cached_property
