@@ -33,7 +33,7 @@ class Tox(TestCommand):
 
 
 setup(
-    name="python-hessian",
+    name="pyhessian",
     version='1.1.0',
     description="Hessian RPC Library",
     long_description=open(
